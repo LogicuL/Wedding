@@ -1,0 +1,162 @@
+.page {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(160deg, #fefcf9 0%, #faf2e4 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 24px 110px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 300;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ── Photo ── */
+.photoWrap {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  margin: 0 auto 26px;
+}
+
+.ringOuter { display: none; }
+
+.ringMid { display: none; }
+
+@keyframes spinRing {
+  to { transform: rotate(360deg); }
+}
+
+.photoCircle {
+  position: relative;
+  z-index: 1;
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  border: 5px solid #111111;
+  box-shadow: 0 18px 54px rgba(45,26,6,0.18);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* ── Names ── */
+.namesWrap {
+  margin: 4px 0 6px;
+  line-height: 1;
+}
+
+.nameLine {
+  font-family: "Italiana", serif;
+  font-size: clamp(68px, 18vw, 96px);
+  color: var(--brown);
+  line-height: 0.88;
+  letter-spacing: -1px;
+}
+
+.amp {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(26px, 7vw, 36px);
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin: 6px 0;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px 0 14px;
+}
+
+.dividerLine {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.dividerOrn {
+  width: 48px;
+  height: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── Date & text ── */
+.date {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(18px, 4.5vw, 24px);
+  color: var(--brown-mid);
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.inviteText {
+  font-size: 15.5px;
+  font-weight: 300;
+  color: var(--text-soft);
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  margin-bottom: 22px;
+}
+
+/* ── Verse ── */
+.verseBox {
+  position: relative;
+  padding: 22px 24px 20px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  text-align: center;
+}
+
+.verseQuoteSvg {
+  display: none;
+}
+
+.verseText {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 26px;
+  color: var(--brown-mid);
+  line-height: 1.75;
+  position: relative;
+  text-align: center;
+}
+
+.verseRef {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+}

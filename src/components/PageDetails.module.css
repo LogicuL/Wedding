@@ -1,0 +1,233 @@
+.page {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(175deg, #fefcf9 0%, #fefcf9 50%, #faf4ea 100%);
+  padding: 56px 24px 110px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+  opacity: 0;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(32px, 9vw, 44px);
+  color: var(--brown);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.locationSub {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #1a0e03;
+  background: linear-gradient(135deg, #d4a84b, #c9a84c);
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.35);
+  -webkit-tap-highlight-color: transparent;
+  gap: 7px;
+}
+.locationSub:active {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+/* Event cards */
+.eventCard {
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(201,168,76,0.16);
+  border-radius: 24px;
+  padding: 24px 22px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 28px rgba(45,26,6,0.07);
+  opacity: 0;
+}
+
+.eventCard::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+}
+
+.church::before {
+  background: linear-gradient(90deg, var(--blush), var(--rose), transparent);
+}
+
+.party::before {
+  background: linear-gradient(90deg, var(--gold-light), var(--gold), transparent);
+}
+
+.icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cardLabel {
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cardTime {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(22px, 5.5vw, 28px);
+  color: var(--brown);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.cardDetail {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-soft);
+  margin-top: 6px;
+  line-height: 1.65;
+}
+
+.venueName {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+  font-size: clamp(22px, 5.5vw, 28px);
+  color: var(--brown);
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+}
+
+.venueAddress {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--text-soft);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+/* Dress code */
+.dressCard {
+  background: linear-gradient(135deg, #d4a84b, #c9a04a);
+  border: none;
+  border-radius: 24px;
+  padding: 24px 20px;
+  box-shadow: 0 6px 28px rgba(201,168,76,0.38);
+  opacity: 0;
+}
+
+.dressTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #1a0e03;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.dressNote {
+  font-size: 13px;
+  color: rgba(26,14,3,0.75);
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  opacity: 0;
+}
+
+.swatchCircle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.13), inset 0 1px 0 rgba(255,255,255,0.45);
+  transition: transform 0.2s;
+}
+
+.swatchCircle:hover {
+  transform: scale(1.12) translateY(-2px);
+}
+
+.swatchLabel {
+  font-size: 11px;
+  color: rgba(26,14,3,0.80);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.locationBtn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 32px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(201,168,76,0.4);
+  background: rgba(255,255,255,0.7);
+  color: var(--brown-mid);
+  font-size: 12.5px;
+  font-family: "Jost", sans-serif;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(45,26,6,0.07);
+}
+
+.locationBtn:active {
+  transform: scale(0.97);
+  background: rgba(255,255,255,0.9);
+}
+
+.venueImg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-top: 14px;
+  display: block;
+}

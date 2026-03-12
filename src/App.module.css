@@ -1,0 +1,113 @@
+.app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 5%,  rgba(242,207,196,0.38) 0%, transparent 58%),
+    radial-gradient(ellipse 60% 50% at 85% 90%, rgba(212,204,232,0.26) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 40% at 50% 50%, rgba(200,216,194,0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 92% 8%,  rgba(247,223,192,0.22) 0%, transparent 50%);
+}
+
+.canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.pageStack {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+}
+
+/* ── Page slots ── */
+.pageSlot {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Active page without entrance animation (initial load) */
+.pageActive {
+  opacity: 1;
+  transform: none;
+}
+
+/* Enter from right (going forward) */
+.enterRight {
+  animation: enterFromRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes enterFromRight {
+  from {
+    transform: translateX(100%) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Enter from left (going back) */
+.enterLeft {
+  animation: enterFromLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-100%) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Exit to left (going forward) */
+.exitLeft {
+  animation: exitToLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes exitToLeft {
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-8%) scale(0.94);
+    opacity: 0;
+  }
+}
+
+/* Exit to right (going back) */
+.exitRight {
+  animation: exitToRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes exitToRight {
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(8%) scale(0.94);
+    opacity: 0;
+  }
+}
