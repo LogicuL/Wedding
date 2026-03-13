@@ -67,7 +67,7 @@ export default function PageDetails({ active }) {
           <p className={styles.cardTime}>Ora 15:00</p>
           <p className={styles.venueName}>Wild Hills – Italian Garden</p>
           <img
-            src="https://www.wildhills.ro/wp-content/uploads/2025/02/glass-house-3-1024x610.webp"
+            src="https://www.wildhills.ro/wp-content/uploads/2025/02/IA-INFrame-1008-1536x1024.jpg"
             alt="Wild Hills Italian Garden"
             className={styles.venueImg}
           />
@@ -91,7 +91,7 @@ export default function PageDetails({ active }) {
           <p className={styles.cardTime}>Ora 16:00</p>
           <p className={styles.venueName}>Wild Hills – Glass House</p>
           <img
-            src="https://www.wildhills.ro/wp-content/uploads/2025/02/glass-house-4-1024x683.jpeg"
+            src="https://www.wildhills.ro/wp-content/uploads/2025/02/rolling-hills-1-e1740483578997.jpeg"
             alt="Wild Hills Glass House"
             className={styles.venueImg}
           />

@@ -94,10 +94,10 @@ export default function App() {
     }
   }, [])
 
-  // Pornește muzica automat când ajunge pe pagina 2 (index >= 1)
+  // Pornește muzica automat când ajunge pe pagina 0 (index >= 0)
   const musicStartedRef = useRef(false)
   useEffect(() => {
-    if (cur < 1 || musicStartedRef.current) return
+    if (cur < 0 || musicStartedRef.current) return
     const tryPlay = () => {
       if (!audioRef.current || musicStartedRef.current) return
       audioRef.current.play().then(() => {
@@ -114,11 +114,23 @@ export default function App() {
     }
     document.addEventListener('touchstart', onInteract, { passive: true })
     document.addEventListener('pointerdown', onInteract, { passive: true })
+
+    // Oprește muzica când browserul este în background
+    function onVisibilityChange() {
+      if (document.hidden) {
+        if (audioRef.current) audioRef.current.pause()
+      } else {
+        if (playing && audioRef.current) audioRef.current.play().catch(() => {})
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange)
+
     return () => {
       document.removeEventListener('touchstart', onInteract)
       document.removeEventListener('pointerdown', onInteract)
+      document.removeEventListener('visibilitychange', onVisibilityChange)
     }
-  }, [cur])
+  }, [cur, playing])
 
   const toggleMusic = useCallback(() => {
     const audio = audioRef.current
