@@ -125,17 +125,13 @@ export default function PageRSVP({ active }) {
         <div className={styles.contactRow}>
           <a className={styles.contactCard} href="tel:0758641439">
             <span className={styles.contactIcon}>
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                {/* Head */}
-                <circle cx="12" cy="6" r="3"/>
-                {/* Body */}
-                <path d="M8 21v-3a4 4 0 0 1 8 0v3"/>
-                {/* Bowtie */}
-                <path d="M9.5 13.5 L12 15 L14.5 13.5 L12 12 Z"/>
-                <line x1="9.5" y1="13.5" x2="8" y2="12.5"/>
-                <line x1="14.5" y1="13.5" x2="16" y2="12.5"/>
-                <line x1="9.5" y1="13.5" x2="8" y2="14.5"/>
-                <line x1="14.5" y1="13.5" x2="16" y2="14.5"/>
+              <svg width="32" height="22" viewBox="0 0 32 22" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+                {/* Left wing */}
+                <path d="M14 11 L2 2 L2 20 Z"/>
+                {/* Right wing */}
+                <path d="M18 11 L30 2 L30 20 Z"/>
+                {/* Center knot */}
+                <ellipse cx="16" cy="11" rx="2.5" ry="3.5"/>
               </svg>
             </span>
             <span className={styles.contactName}>Clau</span>
@@ -143,15 +139,17 @@ export default function PageRSVP({ active }) {
           </a>
           <a className={styles.contactCard} href="tel:0741989139">
             <span className={styles.contactIcon}>
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                {/* Head */}
-                <circle cx="12" cy="8" r="3"/>
-                {/* Veil - flows from top of head */}
-                <path d="M8 5 Q6 3 5 2 Q9 2 12 5 Q15 2 19 2 Q18 3 16 5" strokeWidth="1" opacity="0.8"/>
-                <path d="M8 5 Q6 8 7 13" strokeWidth="0.9" opacity="0.5"/>
-                <path d="M16 5 Q18 8 17 13" strokeWidth="0.9" opacity="0.5"/>
-                {/* Body */}
-                <path d="M8 21v-3a4 4 0 0 1 8 0v3"/>
+              <svg width="30" height="26" viewBox="0 0 30 26" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+                {/* Bodice top */}
+                <path d="M10 2 Q10 0 15 0 Q20 0 20 2 L19 8 L11 8 Z"/>
+                {/* Sweetheart neckline */}
+                <path d="M11 3 Q12.5 5.5 15 4.5 Q17.5 5.5 19 3" strokeWidth="0.9" opacity="0.55"/>
+                {/* Waist */}
+                <path d="M11 8 Q15 9.5 19 8"/>
+                {/* Skirt flares wide */}
+                <path d="M11 8 L2 26 L28 26 L19 8"/>
+                {/* Skirt layers */}
+                <path d="M7 17 Q15 19 23 17" strokeWidth="0.85" opacity="0.45"/>
               </svg>
             </span>
             <span className={styles.contactName}>Maria</span>

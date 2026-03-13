@@ -94,6 +94,23 @@ export default function App() {
     }
   }, [])
 
+  // Oprește/reia muzica când browserul intră/iese din background
+  const playingRef = useRef(false)
+  useEffect(() => { playingRef.current = playing }, [playing])
+
+  useEffect(() => {
+    function onVisibilityChange() {
+      if (!audioRef.current) return
+      if (document.hidden) {
+        audioRef.current.pause()
+      } else if (playingRef.current) {
+        audioRef.current.play().catch(() => {})
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange)
+  }, [])
+
   // Pornește muzica automat când ajunge pe pagina 0 (index >= 0)
   const musicStartedRef = useRef(false)
   useEffect(() => {
@@ -115,22 +132,11 @@ export default function App() {
     document.addEventListener('touchstart', onInteract, { passive: true })
     document.addEventListener('pointerdown', onInteract, { passive: true })
 
-    // Oprește muzica când browserul este în background
-    function onVisibilityChange() {
-      if (document.hidden) {
-        if (audioRef.current) audioRef.current.pause()
-      } else {
-        if (playing && audioRef.current) audioRef.current.play().catch(() => {})
-      }
-    }
-    document.addEventListener('visibilitychange', onVisibilityChange)
-
     return () => {
       document.removeEventListener('touchstart', onInteract)
       document.removeEventListener('pointerdown', onInteract)
-      document.removeEventListener('visibilitychange', onVisibilityChange)
     }
-  }, [cur, playing])
+  }, [cur])
 
   const toggleMusic = useCallback(() => {
     const audio = audioRef.current
