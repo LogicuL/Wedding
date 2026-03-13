@@ -20,28 +20,29 @@
 }
 
 .eyebrow {
-  font-size: 14px;
+  font-size: 24px;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 300;
+  font-weight: 400;
+  font-family: "Petit Formal Script", cursive;
   margin-bottom: 10px;
 }
 
 .title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lora", serif;
   font-style: italic;
   font-size: clamp(32px, 9vw, 44px);
   color: var(--brown);
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 17px;
+  font-size: 20px;
   color: var(--text-soft);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -120,8 +121,8 @@
 
 .deadline {
   text-align: center;
-  font-size: 19px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 600;
   color: var(--brown-mid);
   letter-spacing: 0.3px;
   margin-bottom: 32px;
@@ -141,7 +142,7 @@
 }
 
 .footerDate {
-  font-size: 10px;
+  font-size: 15px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: rgba(45,26,6,0.15);
@@ -220,7 +221,7 @@
 
 .field label {
   display: block;
-  font-size: 10px;
+  font-size: 20px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--brown-light);

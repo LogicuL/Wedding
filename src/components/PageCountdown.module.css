@@ -20,11 +20,11 @@
 }
 
 .eyebrow {
-  font-size: 10px;
-  letter-spacing: 5px;
+  font-size: 20px;
+  letter-spacing: 7px;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
