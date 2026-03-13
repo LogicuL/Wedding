@@ -25,12 +25,10 @@
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 400;
-  font-family: 'Libre Baskerville', serif;
   margin-bottom: 10px;
 }
 
 .title {
-  font-family: 'Libre Baskerville', serif;
   font-style: italic;
   font-size: clamp(32px, 9vw, 44px);
   color: var(--brown);
@@ -206,8 +204,6 @@
 }
 
 .modalTitle {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
   font-size: 28px;
   color: var(--brown);
   text-align: center;
